@@ -1,0 +1,347 @@
+.pf-profile-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.pf-profile-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1.2rem;
+    padding: 1.8rem;
+    width: 70%;
+    background-color: #1D1D1D;
+    border-radius: 0.9rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.pf-match-history-section {
+    padding-right: 1rem;
+    border-right: 1px solid #333;
+    max-width: 300px;
+}
+
+.pf-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f3f4f6;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.pf-match-history-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 300px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.pf-match-history-items::-webkit-scrollbar {
+    display: none;
+}
+
+.pf-match-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #252525;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    min-height: 40px;
+}
+
+.pf-match-win {
+    border-left: 3px solid #029F5B;
+}
+
+.pf-match-loss {
+    border-left: 3px solid #E22626;
+}
+
+.pf-match-result-icon {
+    margin-right: 0.5rem;
+}
+
+.pf-match-details {
+    flex: 1;
+}
+
+.pf-match-score {
+    font-size: 0.75rem;
+    align-self: center;
+    color: #9ca3af;
+}
+
+.pf-match-time {
+    font-size: 0.7rem;
+    color: #6b7280;
+}
+
+.pf-loading-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.pf-spinner {
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top: 3px solid #029F5B;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.pf-no-matches {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.875rem;
+    padding: 1rem 0;
+}
+
+.pf-profile-middle-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.pf-profile-avatar-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pf-switch-button {
+    align-items: center;
+    line-height: 1.5rem;
+    background-color: #029f5b;
+    color: #fff;
+    white-space: nowrap;
+    border-radius: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.5em;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    font-weight: 600;
+    transition: 0.25s;
+  }
+  
+  .pf-switch-button:hover {
+    opacity: 1;
+    background-color: #057343;
+    box-shadow: 0 0 10px rgba(94, 255, 0, 0.519);
+    transform: scale(1.03);
+    color: #fff;
+  }
+  
+  
+.pf-profile-avatar {
+    width: 154px;
+    height: 154px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #CECFD2;
+}
+
+.pf-status-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pf-online-status {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #1f2937;
+    display: inline-block;
+    position: static;
+    background-color: #10b981;
+}
+
+.pf-offline-status {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #1f2937;
+    display: inline-block;
+    position: static;
+    background-color: #6b7280;
+}
+
+.pf-inqueue-status {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #1f2937;
+    display: inline-block;
+    position: static;
+    background-color: #e2aa00;
+}
+
+.pf-ingame-status {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #1f2937;
+    display: inline-block;
+    position: static;
+    background-color: #0041c3;
+}
+
+.pf-profile-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pf-profile-username {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    color: #f3f4f6;
+    text-align: center;
+}
+
+.pf-profile-online-status {
+    font-size: 1.05rem;
+    color: #10b981;
+    margin: 0;
+    display: inline;
+    text-transform: capitalize;
+}
+
+.pf-profile-offline-status {
+    font-size: 1.05rem;
+    color: #6b7280;
+    margin: 0;
+    display: inline;
+    text-transform: capitalize;
+}
+
+.pf-profile-inqueue-status {
+    font-size: 1.05rem;
+    color: #e2aa00;
+    margin: 0;
+    display: inline;
+    text-transform: capitalize;
+}
+
+.pf-profile-ingame-status {
+    font-size: 1.05rem;
+    color: #0041c3;
+    margin: 0;
+    display: inline;
+    text-transform: capitalize;
+}
+
+.pf-profile-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-left: 1rem;
+    border-left: 1px solid #333;
+}
+
+.pf-stat-item {
+    text-align: center;
+    min-width: 80px;
+}
+
+.pf-stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #f3f4f6;
+}
+
+.pf-win-rate-positive {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #029F5B;
+}
+
+.pf-win-rate-negative {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #E22626;
+}
+
+.pf-stat-label {
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+@media (max-width: 1200px) {
+    .pf-profile-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .pf-profile-header {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+    }
+    
+    .pf-profile-container {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .pf-match-history-section {
+        border-right: none;
+        border-bottom: 1px solid #333;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        max-width: none;
+    }
+    
+    .pf-profile-stats {
+        border-left: none;
+        border-top: 1px solid #333;
+        padding-left: 0;
+        padding-top: 1rem;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .pf-profile-middle-section {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .pf-profile-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+} 
